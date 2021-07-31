@@ -1,6 +1,6 @@
-# This is DSA practice problems and their solutions in python3 
+# DSA practice problems 
 
-Here is a list of problems that are included in this repo
+Here is a list of problems that are included in this repo along with their leetcode or webiste from which they were found link
 
 | Problem Name | Problem Brief Desc | Link | LeetCode |
 |--------------|--------------------|------| -------- |
