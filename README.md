@@ -3,4 +3,4 @@
 Here is a list of problmes that are included in this repo
 
 | Problem Name | Problem Brief Desc | Link |
-|_____________|____________________|______|
+|--------------|--------------------|------|
