@@ -4,7 +4,7 @@
 # Details : From GeeksForGeeks - (https://www.geeksforgeeks.org/counting-inversions/)
 # Inversion Count for an array indicates – how far (or close) the array is from being sorted. 
 #
-#  If the array is already sorted, then the inversion count is 0, but if the array is sorted in the reverse order, 
+# If the array is already sorted, then the inversion count is 0, but if the array is sorted in the reverse order, 
 # the inversion count is the maximum. 
 # Formally speaking, two elements a[i] and a[j] form an inversion if a[i] > a[j] and i < j 
 # 
@@ -21,21 +21,27 @@
 #
 # Explanation: Given array has two inversions:
 # (3, 1), (3, 2) 
+#
+# Questions to Ask :
+# Are there any duplicates in the given array (nope , all unique)
 # ---------------------------------------------------------------------------------
 
 
 
-# --------------------- Simple or Brute force appraoch ----------------------------
+# --------------------- Simple or Brute force approach ----------------------------
 # This solution basically traveses through the array twice and has O(n^2) time complexity
+#
 # Explanation :
 # For every item in the array we check if the items that come after it are smaller than it or not
 # If they are smaller then it means we need to swap the element with the one smaller than it to make the array sorted.
 # If they are not smaller than current element then no need to swap
 # We initalize a counter in order to keep track of the number of swaps required, its incremented whenever we see that a 
 # swap is needed.
-# This is a quadaratic time colexity because we have two nested for loops
+#
+# This is a quadaratic time complexity because we have two nested for loops
 # and in worst case i.e. if the array is in the opposite order then every element needs to be swapped n time
 # making it n*n i.e. n^2 time complexity
+# Space Complexity : O(1) i.e. constant as we just store the counter value and update it in place
 #---------------------------------------------------------------------------------------
 
 def count_inversions_simple(arr : list) -> int:
@@ -51,6 +57,15 @@ def count_inversions_simple(arr : list) -> int:
     return inversion_counter
 
 
+
+
+# ------------------------------ Divde and Conqure Method (Enhanced Merge Sort) -----------------------------
+# The idea is to divide the array into smaller parts and get the invversion count in each part
+# Explanation and Steps :
+
+
+def count_count_inversions_merge_sort(arr:list) ->int:
+    pass
 
 
 
