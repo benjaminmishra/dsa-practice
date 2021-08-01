@@ -6,3 +6,4 @@ Here is a list of problems that are included in this repo along with their leetc
 |--------------|--------------------|------| -------- |
 | Max Sub Array Sum | Find the max sum of contagious sub array in a given array | [max-sub-array-prob](./max-subarray-prob.py) | [Link](https://leetcode.com/problems/maximum-subarray/)|
 | Inversion Count | Count the number of inversions in an array | [inversion-count-in-arr](./inversion-count-in-arr.py) | [Link](https://afteracademy.com/blog/inversion-count-in-an-array)|
+| Merge Sort | Sort an array with time complexity n log n | [merge-srot](./merge-sort.py)|[GeeksForGeeks](https://www.geeksforgeeks.org/merge-sort/)

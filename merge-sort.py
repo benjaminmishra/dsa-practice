@@ -30,5 +30,5 @@ def merge_sort(arr:list, start_index:int, end_index:int) ->list:
     left_arr = arr[0:middle]
     right_arr = arr[middle+1:length]
 
-    
+
 
