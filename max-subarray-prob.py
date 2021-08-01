@@ -49,8 +49,6 @@ def max_subarray_sum_brute(arr):
 # the overall problem.
 # The sub problem is finding the max subarray sum up until the current element 
 
-
-
 def max_subarray_sum(arr):
     global_max_sum = float('-inf')
     curr_max_sum = 0
