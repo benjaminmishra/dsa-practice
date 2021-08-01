@@ -25,4 +25,51 @@
 
 
 
-# --------------------- Simple or Brute force appraoch --------------------
+# --------------------- Simple or Brute force appraoch ----------------------------
+# This solution basically traveses through the array twice and has O(n^2) time complexity
+# Explanation :
+# For every item in the array we check if the items that come after it are smaller than it or not
+# If they are smaller then it means we need to swap the element with the one smaller than it to make the array sorted.
+# If they are not smaller than current element then no need to swap
+# We initalize a counter in order to keep track of the number of swaps required, its incremented whenever we see that a 
+# swap is needed.
+# This is a quadaratic time colexity because we have two nested for loops
+# and in worst case i.e. if the array is in the opposite order then every element needs to be swapped n time
+# making it n*n i.e. n^2 time complexity
+#---------------------------------------------------------------------------------------
+
+def count_inversions_simple(arr : list) -> int:
+    length = len(arr)
+
+    inversion_counter = 0                          # start counter that keeps tracks of number of swaps required
+
+    for i in range(0,length):                      # first loop to go through each element in the array
+        for j in range(i+1, length):               # second loop , start from the element that is on the right of the current element
+            if arr[i]>arr[j]:                      # if current element larger than the element it is being compared with then 
+                inversion_counter+=1               # increase counter , otherwise do nothing and move on
+    
+    return inversion_counter
+
+
+
+
+
+# Driver code
+def main():
+    # test 1 - worst case scenario , i.e. the array is in the decending order
+    input_arr_1 = [8, 4, 2, 1]
+    result_1 = count_inversions_simple(input_arr_1)
+    print(result_1)
+
+    # test 2 - medium case , i.e some elements are in order other need to be swapped
+    input_arr_2 = [3,1,2]
+    result_2 = count_inversions_simple(input_arr_2)
+    print(result_2)
+
+    # test 3 - best case , everything is in ascending order
+    input_arr_3 = [4,5,6,7,8,9,10]
+    result_3 = count_inversions_simple(input_arr_3)
+    print(result_3)
+
+
+main()
