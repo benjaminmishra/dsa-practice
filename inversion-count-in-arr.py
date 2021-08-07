@@ -29,7 +29,7 @@
 
 
 # --------------------- Simple or Brute force approach ----------------------------
-# This solution basically traveses through the array twice and has O(n^2) time complexity
+# This solution basically traverses through the array twice and has O(n^2) time complexity
 #
 # Explanation :
 # For every item in the array we check if the items that come after it are smaller than it or not
@@ -49,8 +49,8 @@ def count_inversions_simple(arr : list) -> int:
 
     inversion_counter = 0                          # start counter that keeps tracks of number of swaps required
 
-    for i in range(0,length):                      # first loop to go through each element in the array
-        for j in range(i+1, length):               # second loop , start from the element that is on the right of the current element
+    for i in range(0,length):                      # first loop to go through each element in the array O(n)
+        for j in range(i+1, length):               # second loop , start from the element that is on the right of the current element O(n)
             if arr[i]>arr[j]:                      # if current element larger than the element it is being compared with then 
                 inversion_counter+=1               # increase counter , otherwise do nothing and move on
     
@@ -59,13 +59,15 @@ def count_inversions_simple(arr : list) -> int:
 
 
 
-# ------------------------------ Divde and Conqure Method (Enhanced Merge Sort) -----------------------------
+# ------------------------------ Divide and Conqure Method (Enhanced Merge Sort) -----------------------------
 # The idea is to divide the array into smaller parts and get the invversion count in each part
 # Explanation and Steps :
 
 
-def count_count_inversions_merge_sort(arr:list) ->int:
-    pass
+def count_inversions_merge_sort(arr:list) ->int:
+    if len(arr)>1:
+        # do merge sort and increase counter only when there is a inversion
+        pass
 
 
 
