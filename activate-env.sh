@@ -3,8 +3,13 @@
 # env does not exists and then activate the python env.
 # ------------------------------------------------------------
 
-if [ ! -d "./env/" ]
-then
+if [ ! -f "./requirements.txt" ]; then
+    echo "requirements file does not exist"
+fi
+
+pip install -r ./requirements.txt
+
+if [ ! -d "./env/" ]; then
     python3 -m venv env
     wait
 fi
