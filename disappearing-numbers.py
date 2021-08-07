@@ -67,13 +67,51 @@ def find_dissapearing_numbers_slow(nums : list)-> list:
 
 
 # ----------------------------------- Efficient solution ------------------------------------------ 
+# The array has 1 to n numbers and has a len of n
+# Taking advantage of this info we can solve this problem in linear time
+
+# Explanation of this below code and logic behind it :
+# Since the array only contains numbers between 1 to n and the array size is n , each item in the array 
+# can be rearded as an index of the array. All we need to do to solve this problem is figure of the missing 
+# index of the array. In order to do that we visit each item i.e. index of the array and mark it as visited 
+# If any pirticular index i.e. item of the array is not visted then the array index of the number is a missing number
+
+# To mark a item of array as visited mark it negetive
+
+# Implementation Steps : 
+# (1) Loops through each item of the array
+# (2) For each item get the index it represents by substracting the absolute value of that item from 1
+# (3) Use this resulting number from step 2 to visit the item of the array at that location
+# (4) Once visted mark the number as -ve
+# (5) Scan the array again and find the elements that are not -ve
+# (6) The number from step 5 are the ones not visited at all
+# (7) The index + 1 of the number are the missing items / numbers from 1-n
+
+
+# Time Complexity of this algo is O(n) i.e. linear 
+# Space compleity is constant i.e. O(1)
+# ----------------------------------------------------------------------------------------------------
 
 def find_dissappearing_numbers_fast(nums : list) -> list:
-    pass
+    n = len(nums)
+    result : list=[]
+
+    for i in range(0,n):                       # O(n) time complexity
+        index = abs(nums[i])-1
+        if nums[index]>0:
+            nums[index] = -nums[index]
+
+    for j in range(0,n):                       # O(n) time complexity
+        if nums[j]>0:
+            result.append(j+1)
+
+    return result
 
 
 
-# Driver Code :
+
+
+# Driver Code 
 def main():
     test_input1 = [4,3,2,7,8,2,3,1]
     result1 = find_dissapearing_numbers_slow(test_input1)
@@ -82,6 +120,14 @@ def main():
     test_input2 = [1,1]
     result2 = find_dissapearing_numbers_slow(test_input2)
     print(result2)
+
+    test_input3 = [4,3,2,7,8,2,3,1]
+    result3 = find_dissappearing_numbers_fast(test_input3)
+    print(result3)
+
+    test_input4 = [1,1]
+    result4 = find_dissappearing_numbers_fast(test_input4)
+    print(result4)
 
 
 main()
