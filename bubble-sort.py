@@ -2,25 +2,24 @@
 
 # ------------------------------- Problem Description ----------------------------
 # Write the Bubble Sort Alorithm
-#
 # ---------------------------------------------------------------------------------
 
 
 
 
 # -----------------------------  Solution --------------------------------
+# Simplest algorithm for sorting an array/list
+# It works by constantly swpping two adjcent elements in the array in case they are out of order
+# This operation needs to be performed for all positions of the array in order to sort the entire array
+
+# Time Complexity: O(n^2) 
 #
-#
-#
-# Time Complexity:
-#
-# Space Complexity:
+# Space Complexity: O(1) , constant
 #------------------------------------------------------------------------------------
 
 def bubble_sort(arr : list[int]) -> list[int]:
-    n : int = len(arr)
-    j : int = 0
-    
+    n : int = len(arr)  # length of the array
+
     # we need to run the comparision for all positions in the array
     for j in range(n):
         # for each item in the array
