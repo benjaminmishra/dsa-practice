@@ -10,4 +10,4 @@ Here is a list of problems that are included in this repo along with their leetc
 | Disappearing numbers | Find All Numbers Disappeared in an Array | [disappearing-numbers](./disappearing-numbers.py) | [LeetCode](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)
 | Delete Duplicates | Delete duplicates from a sorted array | [delete-duplicates](./delete-dups-sorted-arr.py)|[LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 | Buy sell stock once | Buy and sell stock only once to maximize profit | [buy-sell-stock](./buy-sell-stock.py)|
-| [LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+[LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
