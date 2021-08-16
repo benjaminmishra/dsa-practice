@@ -1,7 +1,7 @@
 
 
 # ------------------------------- Problem Description ----------------------------
-# Write the Bubble Sort Alorithm
+# Implementation of Bubble Sort Algorithm
 # ---------------------------------------------------------------------------------
 
 
