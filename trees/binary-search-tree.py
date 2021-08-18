@@ -11,6 +11,9 @@ class BinarySearchTree :
 
 
     def insert(self, value) -> None:
+        '''
+        Function to insert a node into Binary Search Tree
+        '''
         # if the data field is not set the set it
         if not self.data:
             self.data = value
@@ -27,4 +30,6 @@ class BinarySearchTree :
                 self.right_child.insert(value)
                 return
             self.right_child = BinarySearchTree(value)
+
+            
 
