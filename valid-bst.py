@@ -18,11 +18,11 @@ from trees import generatebst
 # Space Complexity
 # ----------------------------------------------------------------------------------
 
-
+# main function 
 def validate_bst(root : BinarySearchTree)-> bool:
     return is_valid(root, float("inf"), float("-inf"))
 
-
+# recursive code
 def is_valid(node : BinarySearchTree, max, min) -> bool:
     if not node:
         return True

@@ -12,3 +12,4 @@ Here is a list of problems that are included in this repo along with their leetc
 | Buy sell stock once | Buy and sell stock only once to maximize profit | [buy-sell-stock](./buy-sell-stock.py)|[LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 | Bubble sort | Bubble sort algorithm implementation | [bubble-sort](./bubble-sort.py)|[Youtube](https://www.youtube.com/watch?v=uJLwnsLn0_Q)
 | Binary Search | Binary Search algo implemented two ways | [binary-search](./binary-search.py)| [GeeksforGeeks](https://www.geeksforgeeks.org/python-program-for-binary-search/)
+| BST | Binary Search Tree Implementation and operations | [trees](./trees/BinarySearchTree.py) |[GeeksforGeeks](https://www.geeksforgeeks.org/binary-search-tree-data-structure/)|
