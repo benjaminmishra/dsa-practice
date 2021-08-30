@@ -21,3 +21,53 @@
 #  ^ > / > * > + > -    (BODMAS rule)
 #
 # ---------------------------------------------------------------------------
+from linear_ds import Stack, Queue
+
+def infix_to_postfix(infix_str:str) -> Queue:
+    s : Stack = Stack()
+    q : Queue = Queue()
+
+    prec : dict = {
+        "^" : 4,
+        "/" : 3,
+        "*" : 2,
+        "+" : 1,
+        "-" : 0
+    }
+
+    for item in infix_str.split():
+        if item.isdigit():
+            q.enqueue(item)
+        elif item == ")":
+            while not s.is_empty() and not s.top() == "(" :
+                q.enqueue(s.pop())
+            
+            if not s.is_empty() and s.top()=="(": 
+                s.pop()
+        else:
+            while not s.is_empty() and not item == "(" :
+                if not s.top() == "(" and prec[s.top()] > prec[item]:
+                    q.enqueue(s.pop())
+                else:
+                    break
+
+            s.push(item)
+
+    while not s.is_empty():
+            q.enqueue(s.pop())
+
+    return q
+
+
+
+def main():
+    input_1 : str = "3 * ( 4 + 5 )"
+    result_1 : Queue = infix_to_postfix(input_1)
+    print(result_1)
+
+    input_2 : str = "3 * 4 + 5"
+    result_2 : Queue = infix_to_postfix(input_2)
+    print(result_2)
+
+
+main()

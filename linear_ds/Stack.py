@@ -6,19 +6,19 @@ class Stack:
         self._arr : list[any] = []
         self._calc_size_top()
 
-    def push(self, val : any) -> None:
+    def push(self, val) -> None:
         '''adds item to the top of the stack'''
         self._arr.append(val)
         self._calc_size_top()
 
-    def pop(self) -> any:
+    def pop(self):
         '''removes item from top of stack and returns it'''
-        popped_item = copy(self._arr[self._top_idx])
+        to_be_popped = copy(self._arr[self._top_idx])
         self._arr.pop()
         self._calc_size_top()
-        return popped_item
+        return to_be_popped
 
-    def top(self) -> any:
+    def top(self):
         '''gets the top item from the stack without removing it'''
         return self._arr[self._top_idx]
 
@@ -27,8 +27,15 @@ class Stack:
         '''readonly property that gets the size of the current stack'''
         return self._size
 
+    def is_empty(self) -> bool:
+        self._calc_size_top()
+        if self._size == 0:
+            return True
+        else:
+            return False 
 
-    def _calc_size_top(self):
+
+    def _calc_size_top(self) -> None:
         '''private function to recalculate the properties inside stack object'''
         self._size = len(self._arr)
         self._top_idx = self._size-1
