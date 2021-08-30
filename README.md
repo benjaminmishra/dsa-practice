@@ -13,3 +13,4 @@ Here is a list of problems that are included in this repo along with their leetc
 | Bubble sort | Bubble sort algorithm implementation | [bubble-sort](./bubble-sort.py)|[Youtube](https://www.youtube.com/watch?v=uJLwnsLn0_Q)
 | Binary Search | Binary Search algo implemented two ways | [binary-search](./binary-search.py)| [GeeksforGeeks](https://www.geeksforgeeks.org/python-program-for-binary-search/)
 | BST | Binary Search Tree Implementation and operations | [trees](./trees/BinarySearchTree.py) |[GeeksforGeeks](https://www.geeksforgeeks.org/binary-search-tree-data-structure/)|
+| Evaluate Postfix | Evalute a reverse polish notation | [posfix_eval](./postfix_expression.py) | [Leetcode](https://leetcode.com/problems/evaluate-reverse-polish-notation/)|

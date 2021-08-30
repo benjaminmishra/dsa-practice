@@ -1,9 +1,9 @@
-from trees import height, BinarySearchTree, generatebst, bfs
+from trees import height, BinarySearchTree, create_bst, bfs_print
 
 
 
 
-bst : BinarySearchTree = generatebst.create_bst()
+bst : BinarySearchTree = create_bst()
 
 bst.insert(53)
 
@@ -19,4 +19,4 @@ postorder_result = bst.postorder()
 print("Postorder Traversal : " + str(postorder_result))
 
 
-bfs.bfs_print(bst)
+bfs_print(bst)
