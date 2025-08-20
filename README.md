@@ -1,6 +1,6 @@
 # DSA practice problems 
 
-Here is a list of problems that are included in this repo along with their leetcode or webiste from which they were found link
+Here is a list of some of the problems that are included in this repo along with their leetcode or webiste from which they were found link
 
 | Problem Name | Problem Desc | Link | LeetCode/Solution Link |
 |--------------|--------------------|------| -------- |
